@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>String</title>
+    <style>
+        h1{
+            border: 3px solid green;
+            text-align: center;
+            padding: 5px;
+        }
+        h3{
+            margin-left: 50px;
+        }
+        p,button{
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Strings in Javascript</h1>
+    <h3>* Set of Characters is known as String.<br>* Strings are always enclosed in Single or double Quotes.</h3>
+    <p>Access the string:</p>
+    <p id="para1"></p>
+    <h2 style="text-align: center;">String Methods:</h2>
+    <h3>* Slice() Method:</h3>
+    <p id="para2"></p>
+    <h3>* Substr() Method:</h3>
+    <p id="para3"></p>
+    <h3>* Replace() Method:</h3>
+    <p id="para4">Welcome to Kodu Institute</p>
+    <button onclick="replacetxt()">Replace Text</button>
+    <h3>* toUpperCase() Method:</h3>
+    <p id="para5"> Welcome back</p>
+    <button onclick="upper()">Uppercase</button>
+    <h3>* toLowerCase() Method:</h3>
+    <p id="para6">HELLO!</p>
+    <button onclick="lower()">Lowercase</button>
+    <h3>* concat() Method:</h3>
+    <p id="para7"></p>
+    <h3>* charAt() Method: </h3>
+    <p id="para8">Kodu Hisar</p>
+    <h3>* charCodeAt() Method: </h3>
+    <p id="para9">Kodu Hisar</p>
+
+    <script>
+        let a="India,Australia,America,China,Nepal";
+        document.getElementById("para1").innerHTML=a;
+        // Slice Method:
+        let str=a.slice(6,15);
+        document.getElementById("para2").innerHTML=str;
+        // Substr method:
+        let b=a.substr(6,6);
+        document.getElementById("para3").innerHTML=b;
+        // Replace method:
+        function replacetxt(){
+           let text=document.getElementById("para4").innerHTML;
+            document.getElementById("para4").innerHTML=text.replace("Kodu","Our");
+        }
+        // Convert to Upper case
+        function upper(){
+            let txt1=document.getElementById("para5").innerHTML;
+            document.getElementById("para5").innerHTML=txt1.toUpperCase();
+        }
+        // Convert to Lower case
+        function lower(){
+            let txt2=document.getElementById("para6").innerHTML;
+            document.getElementById("para6").innerHTML=txt2.toLowerCase();
+        }
+        // Concat Method
+        let t1="Fullstack";
+        let t2="Developer";
+        let t3=t1.concat(" ",t2);
+        document.getElementById("para7").innerHTML=t3;
+        // charAt method:
+        let a1="Kodu Hisar";
+        document.getElementById("para8").innerHTML=a1.charAt(2);
+        // charCodeAt method
+        var ab="Kodu Hisar";
+        document.getElementById("para9").innerHTML=ab.charCodeAt(0);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array</title>
+    <style>
+        h1{
+            border: 3px solid green;
+            padding: 5px;
+            text-align: center;
+        }
+        p,h2,button{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array in Javascript</h1>
+    <p id="para1"></p>
+    <p id="para2"></p>
+
+    <h2>Array methods:</h2>
+    <p id="para3"></p>
+    <p id="para4"></p>
+    <p id="para5"></p>
+    <button onclick="add()">Add Element</button>
+    <p id="para6"></p>
+    <p id="para7"></p>
+    <button onclick="del()">Delete Element</button>
+    <p id="para8"></p>
+    <p id="para9"></p>
+    <p id="para10"></p>
+
+    <script>
+        const a=["Red","Green","Orange","Black","White"];
+        // Accessing the array 
+        document.getElementById("para1").innerHTML=a;
+        // Accessing array element by index no.
+        document.getElementById("para2").innerHTML=a[2];
+        // Converting array to string
+        document.getElementById("para3").innerHTML=a.toString();
+        // Calculating Length of an array:
+        let len=a.length;
+        document.getElementById("para4").innerHTML= len;
+        // creating list of array
+        let list,i,size;
+        list="<ul>";
+            size=a.length;
+            for(i=0;i<size;i++){
+                list+="<li>"+ a[i] +"</li>";
+            }
+            list+="</ul>";
+        document.getElementById("para5").innerHTML=list;
+
+        // Adding new element in an array:
+        function add(){
+            a.push("Blue"); 
+        document.getElementById("para6").innerHTML=a;
+        }
+        // Display full array
+        document.getElementById("para7").innerHTML=a;
+        // Delete an element from an array:
+        function del(){
+            a.pop();
+        document.getElementById("para8").innerHTML=a;
+        }
+        // Array sorting
+        document.getElementById("para9").innerHTML=a.sort();
+        // Reverse of an array
+        document.getElementById("para10").innerHTML=a.reverse();
+    </script>
+    
+</body>
+</html>

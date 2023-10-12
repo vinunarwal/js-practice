@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Java Script </title>
+    <!-- External JS -->
+    <script src="js1.js"></script>  
+     <!--  Internal JS -->
+     <script>
+        function ab(){
+        document .getElementById("p1").innerHTML="After using internal js";
+        }
+    </script>
+    <!-- CSS -->
+    <style>
+        *{
+            font-size: 20px;
+        }
+        h1{
+            text-align: center;
+            font-family: cooper;
+            color: rgb(81, 19, 19);
+            font-size: 40px;
+            border: 5px solid green;
+            padding: 10px;
+        }
+        h2{
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Java Script</h1>
+    <h2>Internal Js</h2>
+    <p id="p1">Paragraph 1</p>
+    <button type="button" onclick="ab()">Click Here</button>
+    <h2> External Js</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis magni necessitatibus atque est debitis sint saepe obcaecati possimus tenetur dolor totam, iusto consectetur veritatis, sequi exercitationem nisi odio illo numquam.</p>
+    <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, ipsa, quaerat fugiat atque rem beatae facere voluptas vel debitis deserunt placeat doloremque aliquam quidem nisi commodi neque asperiores vero numquam?</p>
+    <button type="button" onclick="fun1()"> Click </button>
+</body>
+</html>
