@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date</title>
+</head>
+<body>
+    <h1>Date in JavaScript</h1>
+    <p id="p1"></p>
+    <h2>Date Methods:</h2>
+    <h3>toDateString() Method:</h3>
+    <p id="p2"></p>
+    <h3>toUTCString() Method:</h3>
+    <p id="p3"></p>
+    <h3>toISOString() Method:</h3>
+    <p id="p4"></p>
+    <h3>toString() Method:</h3>
+    <p id="p5"></p>
+    <h3>Date.parse() Method:</h3>
+    <p id="p6"></p>
+
+    <script>
+        const d1=new Date();
+        document.getElementById("p1").innerHTML=d1;
+        // Date Methods:
+        const d2=new Date();
+        document.getElementById("p2").innerHTML=d2.toDateString();
+        const d3=new Date();
+        document.getElementById("p3").innerHTML=d3.toUTCString();
+        const d4=new Date();
+        document.getElementById("p4").innerHTML=d4.toISOString();
+        const d5=new Date();
+        document.getElementById("p5").innerHTML=d5.toString();
+        document.getElementById("p6").innerHTML=Date.parse("April 2020",2010);
+    </script>   
+</body>
+<style>
+    h1{
+        text-align: center;
+        border: 3px solid green;
+        padding: 8px;
+    }
+    h2,h3,p{
+        margin-left: 50px;
+    }
+</style>
+</html>

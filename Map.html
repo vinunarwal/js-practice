@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Maps in JavaScript</h1>
+<h3>* Map holds Key-Value Pairs</h3>
+<p>Accessing specific value of any key:</p>
+<p id="p1"></p>
+<p id="p2"></p>
+<p>All Values of Keys :</p>
+<p id="p3"></p>
+<p id="p4"></p>
+<p id="p5"></p>
+<p id="p6"></p>
+</body>
+
+<script>
+const scl = new Map([
+  ["Students", 1000],
+  ["Teachers", 70],
+  ["Peon", 2]
+]);
+document.getElementById("p1").innerHTML = scl.get("Teachers");
+// Adding a key-value
+scl.set("Principal",1);
+document.getElementById("p2").innerHTML = scl.get("Students");
+
+// Access value of key 
+  let result = "";
+  scl.forEach (function(x) {result += x + "<br>";})
+  document.getElementById("p3").innerHTML =  result + "<br>";
+  document.getElementById("p4").innerHTML = "Size : "+ scl.size;
+
+//   checking if the key is present in the map or not
+  document.getElementById("p5").innerHTML = scl.has("school");
+  document.getElementById("p6").innerHTML = scl.has("Teachers");
+</script>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>For Loop</title>
+</head>
+<body>
+    <h1>For Loop in JavaScript</h1>
+    <p id="p1"></p>
+    <h2>For in Loop:</h2>
+    <p id="p2"></p>
+    <h2>For of Loop</h2>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <h1>While Loop in JavaScript</h1>
+    <p id="p5"></p>
+</body>
+
+<script>
+    const col=["black","red","blue","green","yellow","orange"];
+    let i;
+    let len=col.length;
+    let result="";
+    for(i=0;i<len;i++){
+        result+=col[i]+"<br>";       
+    }
+    document.getElementById("p1").innerHTML=result;
+
+    // For in loop
+    const emp={Name:"Vinu",Age:"21",Qualification:"Graduation"};
+    let text="";
+    for(let x in emp){
+        text+=emp[x]+"<br>";
+    }
+    document.getElementById("p2").innerHTML=text;
+
+    // For of Loop
+    const lang=["C","Java","C++","HTML"];
+    let txt="";
+    for(let y of lang){
+        txt+=y+" ";
+    }
+    document.getElementById("p3").innerHTML=txt;
+    const name="Vinu";
+    let txt1="";
+    for(let z of name){
+        txt1+=z+"<br>";
+    }
+    document.getElementById("p4").innerHTML=txt1;
+
+    // While Loop
+    let txt2 = "";
+    let a=1;
+    while (a<=10) 
+    {
+        txt2 +="<br>"+ a;
+        a++;
+    }
+    document.getElementById("p5").innerHTML=txt2;
+</script>
+
+<style>
+    h1{
+        border: 3px solid green;
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+</html>
