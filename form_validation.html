@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Form Validation</title>
+    <link rel="stylesheet" href="form_validation.css">
+</head>
+
+<body>
+    <form name="Form1"  onsubmit="return validateForm()" method="post">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <table>
+                <tr id="name">
+                    <td> Name: </td>
+                    <td><input type="text" name="name" placeholder="Ravi"><br>
+                        <span class="err"> </span></td>
+                </tr>
+                <tr id="email">
+                    <td>Email:</td>
+                    <td><input type="text" name="mail" placeholder="ravi12@gmail.com"><br>
+                        <span class="err"> </span></span></td>
+                </tr>
+                <tr id="num">
+                    <td>Phone:</td>
+                    <td><input type="text" name="numb" placeholder="+91"><br>
+                        <span class="err"> </span></td>
+                </tr>
+                <tr id="pass1">
+                    <td>Password: </td>
+                    <td><input type="text" name="pass1" placeholder=".........."><br>
+                        <span class="err"> </span></td>
+                </tr>
+                <tr id="pass2">
+                    <td>Confirm Password:</td>
+                    <td><input type="text" name="pass2" placeholder="Re-enter the password"><br>
+                        <span class="err"> </span></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input class="btn" type="submit" value="Register"></td>
+                </tr>
+            </fieldset>
+        </table> 
+    </form>
+    <script src="form_validation.js"></script>
+</body>
+
+</html>
+
+
+      
+
+
+
+
+
