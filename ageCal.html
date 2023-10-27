@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Age Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <h2>Age Calculator</h2>
+        <h3>Enter your date of birth:</h3>
+        <input type="date" id="dob">
+        <button onclick="age()">Calculate Age</button>
+        <span id="result"></span>
+    </div>
+    
+</body>
+<script>
+    function age(){
+        var result=document.getElementById("result");
+        var birthDate=new Date(document.getElementById("dob").value);
+        var currentDate=new Date();
+        var diff=currentDate-birthDate;
+        var age1=new Date(diff);
+        var years=age1.getUTCFullYear()-1970;
+        var months=age1.getUTCMonth();
+        var days=age1.getDate();
+        
+        result.textContent="You are "+years+" years "+months+" months and "+days+" days old."
+    }
+</script>
+
+<style>
+    .main{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        margin: 100px auto;
+        box-shadow: 3px 3px 10px black;
+        padding-bottom: 25px;
+    }
+    .main h2{
+        font-family: cooper;
+        color: brown;
+    }
+    .main input{
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        padding: 0px 15px;
+    }
+    .main button{
+        padding: 10px 30px;
+        margin: 20px;
+        width: 160px;
+        height: 40px;
+        background-image: linear-gradient(to right, skyblue, pink);
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .main button:hover{
+        background-image: linear-gradient(to right, rgb(24, 55, 61), rgb(24, 55, 61));
+        color: white;
+    }
+    
+</style>
+</html>

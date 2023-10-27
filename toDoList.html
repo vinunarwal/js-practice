@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>My To-Do List</h1>
+    <input type="text" id="text" placeholder="Enter the Text...">
+    <button id="add-text" class="addBtn">Add</button>
+    <ul id="List">
+    </ul>
+    <script src="toDoList.js"></script>
+</body>
+<style>
+    body {
+    margin: 0px 50px;
+    min-width: 250px;
+  }
+    h1{
+    text-align: center;
+    font-family: cooper;
+    color: #f44336;
+  }
+  input {
+    padding: 10px;
+    font-size: 18px;
+  }
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  ul li:hover {
+    background: #ddd;
+  }
+  .addBtn {
+    width: 150px;
+    padding: 12px;
+    background: #4f41c6;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 5px;
+  }
+  span{
+    margin: 100px;
+  }
+</style>
+</html>
